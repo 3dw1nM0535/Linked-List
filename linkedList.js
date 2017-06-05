@@ -1,6 +1,6 @@
 //Linked list implementation using the object constructor method
 
-//Node class for adding nodes to elements of linked list. Consist of two properties: element which
+//Node class constructor for adding nodes to elements of linked list. Consist of two properties: element which
 //stores node's data and next which stores link to the next node
 function Node(element) {
   this.element = element;
