@@ -34,3 +34,12 @@ function insert(newElement, item) {
   newNode.next = current.next;
   current.next = newNode;
 }
+
+//display() elements of a linked list
+function display() {
+  var currNode = this.head;
+  while(!(currNode == null)) {
+    console.log(currNode.element);
+    currNode = currNode.next;
+  }
+}
