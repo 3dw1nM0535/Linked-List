@@ -62,7 +62,7 @@ function findPreviousNode(item) {
 }
 
 //now the remove() implementation
-function remove(item) {
+function removeNode(item) {
   var prevNode = this.findPreviousNode(item);
   if(!(prevNode.next == null)) {
     prevNode.next = prevNode.next.next;
