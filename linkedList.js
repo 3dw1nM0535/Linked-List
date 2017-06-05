@@ -16,3 +16,13 @@ function LList() {
   this.remove = remove;
   this.display = display;
 }
+
+//inserting node to linked list
+//find() the after node or before node where to insert the node
+function find(item) {
+  var currNode = this.head;
+  while(currNode.element != item) {
+    currNode = currNode.next;
+  }
+  return currNode;
+}
