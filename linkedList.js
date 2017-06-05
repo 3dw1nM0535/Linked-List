@@ -50,3 +50,21 @@ cities.insert("Chicago", "head");
 cities.insert("Nairobi", "Chicago");
 cities.insert("New York", "Nairobi");
 cities.display();
+
+//remove() to remove node from linked list
+//first findPreviousNode()
+function findPreviousNode(item) {
+  var currNode = this.head;
+  while(!(currNode.next == null) && (currNode.next.element != item)) {
+    currNode = currNode.next;
+  }
+  return currNode;
+}
+
+//now the remove() implementation
+function remove(item) {
+  var prevNode = this.findPreviousNode(item);
+  if(!(prevNode.next == null)) {
+    prevNode.next = prevNode.next.next;
+  }
+}
