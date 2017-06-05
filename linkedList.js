@@ -26,3 +26,11 @@ function find(item) {
   }
   return currNode;
 }
+
+//insert()
+function insert(newElement, item) {
+  var newNode = new Node(newElement);
+  var current = this.find(item);
+  newNode.next = current.next;
+  current.next = newNode;
+}
