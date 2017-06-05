@@ -13,7 +13,7 @@ function LList() {
   this.head = new Node("head");
   this.find = find;
   this.insert = insert;
-  this.remove = remove;
+  //this.remove = remove;
   this.display = display;
 }
 
@@ -38,8 +38,15 @@ function insert(newElement, item) {
 //display() elements of a linked list
 function display() {
   var currNode = this.head;
-  while(!(currNode == null)) {
+  while(!(currNode.next == null)) {
     console.log(currNode.element);
     currNode = currNode.next;
   }
 }
+
+//test program
+var cities = new LList();
+cities.insert("Chicago", "head");
+cities.insert("Nairobi", "Chicago");
+cities.insert("New York", "Nairobi");
+cities.display();
