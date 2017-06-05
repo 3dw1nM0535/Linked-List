@@ -13,7 +13,8 @@ function LList() {
   this.head = new Node("head");
   this.find = find;
   this.insert = insert;
-  //this.remove = remove;
+  this.remove = remove;
+  this.findPreviousNode = findPreviousNode;
   this.display = display;
 }
 
@@ -51,6 +52,10 @@ cities.insert("Nairobi", "Chicago");
 cities.insert("New York", "Nairobi");
 cities.display();
 
+cities.remove("New York");
+
+cities.display();
+
 //remove() to remove node from linked list
 //first findPreviousNode()
 function findPreviousNode(item) {
@@ -62,7 +67,7 @@ function findPreviousNode(item) {
 }
 
 //now the remove() implementation
-function removeNode(item) {
+function remove(item) {
   var prevNode = this.findPreviousNode(item);
   if(!(prevNode.next == null)) {
     prevNode.next = prevNode.next.next;
